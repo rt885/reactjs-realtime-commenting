@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import CommentBox from "./CommentBox";
-import Comments from "./Comments";
 import Ably from "./Ably";
+import ProtectedContent from './ProtectedContent';
+
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class App extends Component {
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
               <CommentBox />
-              <Comments comments = {this.state.comments} />
+              <ProtectedContent comments={this.state.comments} />
             </div>
           </div>
         </div>
